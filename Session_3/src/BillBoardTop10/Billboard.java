@@ -11,6 +11,20 @@ public class Billboard
 
 
 
+
+    //artistName.getIsPlatinum()
+
+    public void add(Musician artist)
+    {
+        if(top10.size() < 10 && )
+        {
+
+        }
+        top10.add(artist);
+    }
+
+
+
     //Don't make alterations to this method!
     public void printTop10()
     {

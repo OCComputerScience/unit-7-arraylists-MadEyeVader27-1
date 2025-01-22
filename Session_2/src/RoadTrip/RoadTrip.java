@@ -1,4 +1,5 @@
 package RoadTrip;
 
-public class RoadTrip {
+public class RoadTrip
+{
 }

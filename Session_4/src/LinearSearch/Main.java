@@ -13,6 +13,24 @@ public class Main
         array.add(2.9);
         array.add(7.0);
 
+        System.out.println(elementFinder(array, 2.9));
 
+    }
+
+    public static int elementFinder(ArrayList<Double> doubles, Double doubleToFind )
+    {
+        if(doubles.isEmpty()) return -1;
+
+        for(int i = 0; i < doubles.size(); i++)
+        {
+            Double currentDouble = doubles.get(i);
+
+            if (currentDouble.equals(doubleToFind))
+            {
+                return i;
+            }
+
+        }
+        return -1;
     }
 }

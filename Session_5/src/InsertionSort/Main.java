@@ -14,14 +14,30 @@ public class Main
         System.out.println(Arrays.toString(array2));
         System.out.println();
 
-        // sort first array
+        insertionSort(array1);
+        insertionSort(array2);
 
-        // sort second array
 
         System.out.print("First array sorted: ");
         System.out.println(Arrays.toString(array1));
         System.out.print("Second array sorted: ");
         System.out.println(Arrays.toString(array2));
+
     }
 
+    public static void insertionSort(int[] arr)
+    {
+        for(int i = 1; i < arr.length; i++)
+        {
+            int currNum = arr[i];
+            int currIdx = i-1;
+
+            while(currIdx >= 0 && arr[currIdx] > currNum)
+            {
+                arr[currIdx+1] = arr[currIdx];
+                currIdx--;
+            }
+            arr[currIdx+1] = currNum;
+        }
+    }
 }
