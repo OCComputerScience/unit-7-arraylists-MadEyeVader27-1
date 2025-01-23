@@ -4,17 +4,11 @@ import java.util.ArrayList;
 
 public class TicketOrganizer
 {
-    private ArrayList tickets;
+    //private ArrayList<> tickets;
 
-    public TicketOrganizer(ArrayList<AirlineTicket> arr)
-    {
-        tickets = arr;
-    }
-
-    //public  getTickets()
+    //public TicketOrganizer(ArrayList<AirlineTicket> arr)
     //{
-        //return tickets;
+        //tickets = arr;
     //}
-
 
 }
