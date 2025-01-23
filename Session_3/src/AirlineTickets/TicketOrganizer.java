@@ -11,10 +11,10 @@ public class TicketOrganizer
         tickets = arr;
     }
 
-    public  getTickets()
-    {
-        return tickets;
-    }
+    //public  getTickets()
+    //{
+        //return tickets;
+    //}
 
 
 }
