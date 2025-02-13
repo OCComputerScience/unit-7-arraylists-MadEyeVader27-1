@@ -19,9 +19,12 @@ public class Main
         numbers.add(9);
         numbers.add(10);
 
-        for(int i = 0; i < numbers.size(); i += 2)
+        for(int i = 0; i < numbers.size(); i++)
         {
-            System.out.println(numbers.get(i));
+            if(i % 2 != 0)
+            {
+                System.out.println(i);
+            }
         }
     }
 }
