@@ -17,7 +17,7 @@ public class Main
         prices.add(12.56);
         prices.add(1.23);
 
-        ArrayListMethods printArray = new ArrayListMethods(print(prices));
+        //ArrayListMethods printArray = new ArrayListMethods(print(prices));
         System.out.println();
     }
 

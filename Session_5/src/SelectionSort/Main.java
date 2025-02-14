@@ -15,14 +15,36 @@ public class Main
         System.out.println(Arrays.toString(array2));
         System.out.println();
 
-        // sort first array
+        selectionSort(array1);
+        System.out.println(array1);
 
-        // sort second array
+        selectionSort(array2);
+        System.out.println(array2);
 
         System.out.print("First array sorted: ");
         System.out.println(Arrays.toString(array1));
         System.out.print("Second array sorted: ");
         System.out.println(Arrays.toString(array2));
+    }
+
+    public static void selectionSort(int[] arr)
+    {
+        int swapCount = 0;
+        for(int index = 0; index < arr.length; index++)
+        {
+            int minIndex = index;
+            for(int j = index; j <arr.length; j++)
+            {
+                if(arr[j] < arr[minIndex])
+                {
+                    minIndex = j;
+                }
+            }
+            int temp = arr[index];
+            arr[index] = arr [minIndex];
+            arr[minIndex] = temp;
+        }
+
     }
 
 }
