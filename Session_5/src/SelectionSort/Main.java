@@ -30,7 +30,7 @@ public class Main
     public static void selectionSort(int[] arr)
     {
         int swapCount = 0;
-        for(int index = 0; index < arr.length; index++)
+        for(int index = 0; index < arr.length - 1; index++)
         {
             int minIndex = index;
             for(int j = index; j <arr.length; j++)
