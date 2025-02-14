@@ -7,15 +7,19 @@ public class GeoLocation
 
     private double latitude;
     private double longitude;
+    private String name;
 
     /**
      * Constructs a geo location object with given latitude and longitude
      */
-    public GeoLocation(double theLatitude, double theLongitude)
+    public GeoLocation(double theLatitude, double theLongitude, String theName)
     {
         latitude = theLatitude;
         longitude = theLongitude;
+        name = theName;
     }
+
+    public String getName() {return name; }
 
     /**
      * Returns the latitude of this geo location
@@ -36,7 +40,7 @@ public class GeoLocation
     // returns a string representation of this geo location
     public String toString()
     {
-        return "latitude: " + latitude + ", longitude: " + longitude;
+        return "latitude: " + latitude + ", longitude: " + longitude + ", name: " + name;
     }
 
     // returns the distance in miles between this geo location and the given
