@@ -1,19 +1,43 @@
 package RoadTrip;
 
+import java.util.ArrayList;
+
 public class RoadTrip
 {
-    ArrayList<GeoLocation> destinations = new GeoLocation();
-    public static void addStop(String name, double longitude, double latitude)
+    ArrayList<GeoLocation> destinations = new ArrayList<GeoLocation>();
+
+    public void addStop(String name, double longitude, double latitude)
     {
         GeoLocation stop = new GeoLocation(longitude, latitude, name);
-        //add to arrayList
+        destinations.add(stop);
 
     }
 
-    public static int getNumOfStops()
+    public int getNumOfStops()
     {
-        return arr.size();
+        return destinations.size();
     }
 
-    public static
+    public double getTripLength()
+    {
+        double totalDistance = 0;
+        for(int i = 0; i < destinations.size()-1; i++)
+        {
+            double distance = destinations.get(i).distanceFrom(destinations.get(i+1));
+            totalDistance += distance;
+        }
+
+        return totalDistance;
+    }
+
+    public void printList()
+    {
+        for(GeoLocation location : destinations)
+        {
+            System.out.println(location);
+        }
+    }
+
+
+
 }

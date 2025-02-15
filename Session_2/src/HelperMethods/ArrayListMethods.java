@@ -4,22 +4,18 @@ import java.util.ArrayList;
 
 public class ArrayListMethods
 {
-    public ArrayListMethods()
-    {
-
-    }
 
     public static void print(ArrayList<Double> arr)
     {
         for(int i = 0; i < arr.size(); i++)
         {
-            System.out.println(i);
+            System.out.print(arr.get(i));
         }
     }
 
     public static void condense(ArrayList<Double> arr)
     {
-        for(int i = 0; i < arr.size(); i+=2)
+        for(int i = 0; i < arr.size()-1; i+=2)
         {
             arr.add(arr.get(i) * arr.get(i + 1));
             arr.remove(i);
@@ -28,12 +24,17 @@ public class ArrayListMethods
         }
     }
 
-    public static void duplicate(ArrayList<Double> arr)
+    public static ArrayList<Double> duplicate(ArrayList<Double> arr)
     {
-        for(int i = 0; i < arr.size()-1; i++)
+        ArrayList<Double> duplicate = new ArrayList<Double>();
+
+        for(int i = 0; i < arr.size(); i++)
         {
-            arr.add(arr.get(i));
+            duplicate.add(arr.get(i));
         }
+
+        return duplicate;
+
     }
 
 }

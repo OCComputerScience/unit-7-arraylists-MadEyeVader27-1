@@ -3,6 +3,8 @@ package HelperMethods;
 import java.util.ArrayList;
 
 import static HelperMethods.ArrayListMethods.print;
+import static HelperMethods.ArrayListMethods.duplicate;
+import static HelperMethods.ArrayListMethods.condense;
 
 public class Main
 {
@@ -17,8 +19,10 @@ public class Main
         prices.add(12.56);
         prices.add(1.23);
 
-        //ArrayListMethods printArray = new ArrayListMethods(print(prices));
-        System.out.println();
+        condense(prices);
+        print(prices);
+
+
     }
 
 }
